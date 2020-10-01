@@ -113,10 +113,10 @@ TextureImporter:
       name: myfirstspritesheet_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 267
-        width: 583
-        height: 394
+        x: 0
+        y: 160
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: myfirstspritesheet_1
       rect:
         serializedVersion: 2
-        x: 792
-        y: 216
-        width: 584
-        height: 404
+        x: 640
+        y: 160
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: myfirstspritesheet_2
       rect:
         serializedVersion: 2
-        x: 1520
-        y: 234
-        width: 594
-        height: 414
+        x: 1280
+        y: 160
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: myfirstspritesheet_3
       rect:
         serializedVersion: 2
-        x: 2268
-        y: 231
-        width: 583
-        height: 404
+        x: 1920
+        y: 160
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
