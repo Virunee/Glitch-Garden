@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -132,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathSFX: {fileID: 8300000, guid: 5dd63297f8f706341843db64652009bc, type: 3}
+  deathVFX: {fileID: 7147865496690904168, guid: fcbeaf433909ee14e99a64a8d79b00e3,
+    type: 3}
   deathVolume: 0.3
 --- !u!58 &2130077057
 CircleCollider2D:
