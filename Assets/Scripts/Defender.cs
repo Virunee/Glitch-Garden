@@ -5,4 +5,9 @@ using UnityEngine;
 public class Defender : MonoBehaviour
 {
     [SerializeField] int goldCost = 100;
+
+    public void AddGold(int amount)
+    {
+        FindObjectOfType<GoldDisplay>().AddGold(amount);
+    }
 }
