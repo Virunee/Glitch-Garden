@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  deathSFX: {fileID: 0}
-  deathVFX: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: 5dd63297f8f706341843db64652009bc, type: 3}
+  deathVFX: {fileID: 7147865496690904168, guid: fcbeaf433909ee14e99a64a8d79b00e3,
+    type: 3}
   deathVolume: 0.3
 --- !u!61 &4604947528664932989
 BoxCollider2D:
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

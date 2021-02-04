@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740138279511575558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.17, z: 0}
+  m_LocalPosition: {x: 0, y: 0.17, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6586685990036557698}
@@ -93,10 +93,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6586685990036557698}
   - component: {fileID: 7062904561063540864}
-  - component: {fileID: 1998116760177878961}
   - component: {fileID: 2287749933190572734}
   - component: {fileID: 4084587386051617693}
   - component: {fileID: 4988769201744036779}
+  - component: {fileID: 91126403}
+  - component: {fileID: 91126406}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -138,18 +139,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1998116760177878961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9102039625194746246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65e0ecf587eaa2e4e8d0649e27011d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2287749933190572734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,9 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf0750c2595ebf44ad1aca20dc92067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  deathSFX: {fileID: 0}
-  deathVFX: {fileID: 0}
+  health: 50
+  deathSFX: {fileID: 8300000, guid: 5dd63297f8f706341843db64652009bc, type: 3}
+  deathVFX: {fileID: 7147865496690904168, guid: fcbeaf433909ee14e99a64a8d79b00e3,
+    type: 3}
   deathVolume: 0.3
 --- !u!61 &4084587386051617693
 BoxCollider2D:
@@ -179,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.008286238}
+  m_Offset: {x: 0, y: -0.04467559}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -190,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0165725}
+  m_Size: {x: 1, y: 0.6988044}
   m_EdgeRadius: 0
 --- !u!50 &4988769201744036779
 Rigidbody2D:
@@ -213,3 +203,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &91126403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102039625194746246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6eed673701405499bcf20edf0a6272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &91126406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102039625194746246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e0ecf587eaa2e4e8d0649e27011d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
