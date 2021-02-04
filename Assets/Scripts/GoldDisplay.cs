@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoldDisplay : MonoBehaviour
 {
-    [SerializeField] int gold = 100;
+    [SerializeField] int gold = 350;
     Text goldText;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,16 @@ public class GoldDisplay : MonoBehaviour
     private void UpdateDisplay()
     {
         goldText.text = gold.ToString();
+    }
+
+    public int GetGoldAmount()
+    {
+        return gold;
+    }
+
+    public bool HaveEnoughGold(int amount)
+    {
+        return gold >= amount;
     }
 
     public void AddGold(int amountToAdd)

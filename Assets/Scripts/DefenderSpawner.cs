@@ -7,9 +7,7 @@ public class DefenderSpawner : MonoBehaviour
     [SerializeField] Defender defender;
     private void OnMouseDown()
     {
-
-        SpawnDefender(getSquareClicked());
-
+        AttemptToPlaceDefenderAt(getSquareClicked());
     }
 
     public void SetSelectedDefender(Defender defenderToSelect)
@@ -17,6 +15,16 @@ public class DefenderSpawner : MonoBehaviour
         defender = defenderToSelect;
     }
 
+    private void AttemptToPlaceDefenderAt(Vector2 gridpos)
+    {
+        var GoldDisplay = FindObjectOfType<GoldDisplay>();
+        int defenderCost = defender.GetCost();
+        if(GoldDisplay.HaveEnoughGold(defenderCost))
+        {
+            SpawnDefender(gridpos);
+            GoldDisplay.SpendGold(defenderCost);
+        }
+    }
     private Vector2 getSquareClicked()
     {
         Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
