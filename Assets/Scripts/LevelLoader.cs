@@ -8,6 +8,7 @@ public class LevelLoader : MonoBehaviour
 {
     int currentSceneIndex;
     float startScreenLoadDelaySecs = 4f;
+    float gameOverScreenLoadDelaySecs = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +28,16 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void LoadGameOverScene()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
+
+    public IEnumerator LoadGameOverScreenAfterDelay()
+    {
+        yield return new WaitForSeconds(gameOverScreenLoadDelaySecs);
+        LoadGameOverScene();
     }
 }

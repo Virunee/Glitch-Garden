@@ -14,12 +14,6 @@ public class Health : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void DealDamage(int damageAmount)
     {
         health -= damageAmount;
@@ -45,7 +39,7 @@ public class Health : MonoBehaviour
         } else
         {
             GameObject deathVFXObject = Instantiate(deathVFX, transform.position, transform.rotation);
-            Destroy(deathVFXObject, 0.2f);
+            Destroy(deathVFXObject, 0.3f);
         }
         
     }
