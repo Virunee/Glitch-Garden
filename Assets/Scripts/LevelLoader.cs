@@ -32,12 +32,12 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadGameOverScene()
     {
-        SceneManager.LoadScene("Game Over");
+        StartCoroutine(LoadGameOverScreenAfterDelay());
     }
 
-    public IEnumerator LoadGameOverScreenAfterDelay()
+    IEnumerator LoadGameOverScreenAfterDelay()
     {
         yield return new WaitForSeconds(gameOverScreenLoadDelaySecs);
-        LoadGameOverScene();
+        SceneManager.LoadScene("Game Over");
     }
 }
