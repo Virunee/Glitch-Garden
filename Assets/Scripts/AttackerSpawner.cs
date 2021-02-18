@@ -19,6 +19,11 @@ public class AttackerSpawner : MonoBehaviour
         
     }
 
+    public void StopSpawning()
+    {
+        spawn = false;
+    }
+
     private void SpawnAttacker()
     {
         int arrayLength = attackerArray.Length;
