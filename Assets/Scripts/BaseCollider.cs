@@ -12,7 +12,6 @@ public class BaseCollider : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        healthBar.setMaxHealth(maxHealth);
     }
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {

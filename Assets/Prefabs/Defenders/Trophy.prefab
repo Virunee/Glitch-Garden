@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  deathSFX: {fileID: 0}
-  deathVFX: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: 5dd63297f8f706341843db64652009bc, type: 3}
+  deathVFX: {fileID: 4411116366142630177, guid: 5c13c89a965dc994fb32a56b3713171d,
+    type: 3}
   deathVolume: 0.3
