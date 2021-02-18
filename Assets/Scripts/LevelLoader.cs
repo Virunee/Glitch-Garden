@@ -8,12 +8,13 @@ public class LevelLoader : MonoBehaviour
 {
     int currentSceneIndex;
     float startScreenLoadDelaySecs = 4f;
-    float gameOverScreenLoadDelaySecs = 2f;
+    
     // Start is called before the first frame update
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if(currentSceneIndex == 0)
+        Debug.Log(currentSceneIndex);
+        if (currentSceneIndex == 0)
         {
             StartCoroutine(LoadStartScreenAfterDelay());
         }
@@ -30,14 +31,16 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void LoadGameOverScene()
+    public void RestartScene()
     {
-        StartCoroutine(LoadGameOverScreenAfterDelay());
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator LoadGameOverScreenAfterDelay()
+    public void LoadMainMenu()
     {
-        yield return new WaitForSeconds(gameOverScreenLoadDelaySecs);
-        SceneManager.LoadScene("Game Over");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
     }
+   
 }

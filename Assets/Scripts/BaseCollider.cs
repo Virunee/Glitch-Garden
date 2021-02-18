@@ -25,7 +25,7 @@ public class BaseCollider : MonoBehaviour
         healthBar.setHealth(currentHealth);
         if (currentHealth <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOverScene();
+            FindObjectOfType<LevelController>().HandleLoseScreen();
         }
         
     }
