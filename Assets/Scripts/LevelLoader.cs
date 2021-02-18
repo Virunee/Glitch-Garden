@@ -13,7 +13,6 @@ public class LevelLoader : MonoBehaviour
     void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(currentSceneIndex);
         if (currentSceneIndex == 0)
         {
             StartCoroutine(LoadStartScreenAfterDelay());
@@ -41,6 +40,11 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Start Screen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
    
 }

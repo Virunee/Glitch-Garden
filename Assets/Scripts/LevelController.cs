@@ -35,7 +35,7 @@ public class LevelController : MonoBehaviour
     private IEnumerator HandleWinCondition()
     {
         winLabel.SetActive(true);
-        AudioSource.PlayClipAtPoint(winSFX, Camera.main.transform.position, 50f);
+        AudioSource.PlayClipAtPoint(winSFX, Camera.main.transform.position, 1f);
         yield return new WaitForSeconds(winLabelDelaySecs);
         FindObjectOfType<LevelLoader>().LoadNextScene();
     }
