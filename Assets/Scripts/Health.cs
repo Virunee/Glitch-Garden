@@ -9,9 +9,11 @@ public class Health : MonoBehaviour
     [SerializeField] AudioClip deathSFX;
     [SerializeField] GameObject deathVFX;
     [Range (0,1)][SerializeField] float deathVolume = 0.3f;
+    float difficultyModifier;
     void Start()
     {
-        
+        difficultyModifier = PlayerPrefsController.GetDifficulty();
+        health -= (int)difficultyModifier;
     }
 
     public void DealDamage(int damageAmount)

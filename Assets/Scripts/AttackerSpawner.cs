@@ -8,12 +8,15 @@ public class AttackerSpawner : MonoBehaviour
     [SerializeField] float minSpawnDelay = 1f;
     [SerializeField] float maxSpawnDelay = 5f;
     [SerializeField] Attacker[] attackerArray;
+
+    float difficultyModifier;
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        while(spawn)
+        difficultyModifier = PlayerPrefsController.GetDifficulty();
+        while (spawn)
         {
-            yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
+            yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay - difficultyModifier));
             SpawnAttacker();
         }
         

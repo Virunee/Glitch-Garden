@@ -8,10 +8,12 @@ public class Attacker : MonoBehaviour
     float currentMovementSpeed = 2f;
     GameObject currentTarget;
     Animator animator;
+    float difficultyModifier;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        difficultyModifier = PlayerPrefsController.GetDifficulty();
     }
 
     private void Awake()

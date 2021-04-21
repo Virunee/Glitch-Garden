@@ -6,8 +6,15 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     [Tooltip("Level time in seconds")]
-    [SerializeField] float levelTime = 10;
+    [SerializeField] float levelTime = 20;
     bool triggeredLevelFinished = false;
+    float difficultyModifier;
+
+    private void Start()
+    {
+        difficultyModifier = PlayerPrefsController.GetDifficulty();
+        levelTime += (difficultyModifier * 10);
+    }
 
     // Update is called once per frame
     void Update()
